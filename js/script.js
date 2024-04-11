@@ -32,5 +32,24 @@ const teamMembers = [
     }
   ];
   
-  // Stampa dell'array teamMembers
+  // Controllo dell'array teamMembers
   console.log(teamMembers);
+
+
+
+  // Collego il div 'team-container' di index
+const container = document.getElementById('team-container');
+
+teamMembers.forEach(member => {
+  // Creao un div che contenga le informazioni del membro, e  lo faccio per ogni membro con .forEach(member
+  const memberDiv = document.createElement('div');
+
+  // Creazione della stringa con le informazioni del membro
+  const memberInfo = `Nome: ${member["nome"]}, Ruolo: ${member["ruolo"]}, Foto: <img src="${member["foto"]}" alt="">`;
+
+  // metto la stringa creata precedentemente dentro a ciascun div che ho creato nell'html
+  memberDiv.innerHTML = memberInfo;
+
+  // Aggiunta del div del membro al container principale
+  container.innerHTML = memberInfo;
+});
