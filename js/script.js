@@ -51,5 +51,5 @@ teamMembers.forEach(member => {
   memberDiv.innerHTML = memberInfo;
 
   // Aggiunta del div del membro al container principale
-  container.innerHTML += memberInfo;
+  container.appendChild(memberDiv);
 });
